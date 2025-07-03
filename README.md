@@ -39,8 +39,9 @@ Follow the instructions below to set up the project on your local machine.
 <br>
 
 2. Create a Python Virtual Environment
-Make sure you have Python 3.8 or higher installed.
-- python -m venv env
+
+- **Important:** A Python virtual environment is not included in the uploaded files. You must create one manually to run the project. This helps isolate project-specific dependencies and avoid conflicts with other Python projects on your system. Make sure you have Python 3.8 or higher installed.
+- **Code:** python -m venv env
 
 <br>
 
@@ -78,9 +79,11 @@ Make sure you have Python 3.8 or higher installed.
 
 **📌 Notes**
 
-Contributions, issues, and feature requests are welcome!
+- Contributions, issues, and feature requests are welcome!
 
-Make sure to configure your environment variables for secure deployment (e.g., secret key, debug mode, allowed hosts, etc.).
+- Make sure to configure your environment variables for secure deployment (e.g., secret key, debug mode, allowed hosts, etc.)
+
+- Creating Python Virtual Environment is required in the files uploaded Python Virtual Environment is not there
 
 <br>
 
