@@ -1,0 +1,288 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Garage Services</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{%static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{%static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{%static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+
+<body>
+    
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo-img">
+                                <a href="{%url 'Services:home' %}">
+                                    <img src="{%static 'img/logo1.png' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="menu_wrap d-none d-lg-block">
+                                <div class="menu_wrap_inner d-flex align-items-center justify-content-end">
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a class="active" href="{%url 'Services:home' %}">home</a></li>
+                                                <li><a href="{%url 'Services:service' %}">service</a></li>
+                                                <li><a href="{%url 'Services:about' %}">about</a></li>
+                                                <li><a href="{%url 'Services:contact' %}">contact</a></li>
+                                                {% if user.is_authenticated %}
+                                                <li><a href="{%url 'Services:logout' %}">logout</a></li>
+                                                {% endif %}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="book_room">
+                                        <div class="book_btn">
+                                            <a href="{%url 'Services:service' %}">Book Services</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+
+     <!-- bradcam_area_start -->
+     <div class="bradcam_area breadcam_bg overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>contact</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end -->
+
+
+    <!--Maps Start-->
+    <br><br><div class="map">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1wX2TKn-YUjQWcwPjlgWzvv9ZuRlo2Y7b" width="640" height="480"></iframe>
+    </div>
+    <!--Maps End-->
+     
+    
+    <!--Review Section Start-->
+       <br><br><div class="make_apppointment_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title pl-68">
+                        <h3>Complaint!!!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="appoint_ment_form pl-68">
+                        <form method="POST" action="{%url 'Services:contact' %}">
+                            {% csrf_token %}
+                            <div class="single_field">
+                                <input type="text" id="name" name='name' placeholder="Name">
+                            </div>
+                            <div class="single_field">
+                                <input type="email" id="email" name='email' placeholder="Email">
+                            </div>
+                            <div class="single_field m-0">
+                                <input type="tel" id="phone" name='phone' cols="30" rows="10" placeholder="Phone"></textarea>
+                            </div>
+                            <div class="single_field m-0">
+                                <textarea id="" id="message" name='message' cols="30" rows="10" placeholder="How May We Help You!"></textarea>
+                            </div>
+                            <div class="form_btn">
+                                <button class="boxed-btn3" type="submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-home"></i></span>
+                            <div class="media-body">
+                                <h3>Visit our office at.</h3>
+                                <p>Janta Sevak Society <br> Mori Road Near Bus Depo <br> Mahim Mumbai-400016</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                            <div class="media-body">
+                                <h3>9004710579</h3>
+                                <p>All Days 8am to 12am</p>
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3>TMG17@gmail.com</h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- ================ Review section end ================= -->
+    
+    <!-- footer_start  -->
+    <br><br><footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-md-6 col-lg-5 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="{%url 'Services:home' %}">
+                                <img src="{%static 'img/logo1.png' %}" alt=""></a>
+                                <div>
+                                    <p>&copy; 2020 TMG</p>
+                                    <p>9004710579</p>
+                                </div>
+                            </div>
+                            <p class="address_text">Janta Sevak Society <br> Mori Road Near Bus Depo <br> Mahim Mumbai-400016</p>
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/Luxury-Cars/"target="_blank">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/luxurioustious/"target="_blank">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/petrolicious/"target="_blank">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Information
+                            </h3>
+                            <ul class="links">
+                                <li><a href="{%url 'Services:home' %}">Home</a></li>
+                                <li><a href="{%url 'Services:service' %}">Services</a></li>
+                                <li><a href="{%url 'Services:about' %}">About</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2  col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Follow Us
+                            </h3>
+                            <ul class="links">
+                                <li><a href="https://www.facebook.com/Luxury-Cars/"target="_blank">FaceBook</a></li>
+                                <li><a href="https://www.instagram.com/petrolicious/"target="_blank">Instagram</a></li>
+                                <li><a href="https://twitter.com/luxurioustious/"target="_blank">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+    
+
+
+   
+<!-- JS here -->
+<script src="{%static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{%static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{%static 'js/popper.min.js' %}"></script>
+<script src="{%static 'js/bootstrap.min.js' %}"></script>
+<script src="{%static 'js/owl.carousel.min.js' %}"></script>
+<script src="{%static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{%static 'js/ajax-form.js' %}"></script>
+<script src="{%static 'js/waypoints.min.js' %}"></script>
+<script src="{%static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{%static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{%static 'js/scrollIt.js' %}"></script>
+<script src="{%static 'js/jquery.scrollUp.min.js' %}"></script>
+<script src="{%static 'js/wow.min.js' %}"></script>
+<script src="{%static 'js/nice-select.min.js' %}"></script>
+<script src="{%static 'js/jquery.slicknav.min.js' %}"></script>
+<script src="{%static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{%static 'js/plugins.js' %}"></script>
+<script src="{%static 'js/gijgo.min.js' %}"></script>
+
+<!--contact js-->
+<script src="{%static 'js/contact.js' %}"></script>
+<script src="{%static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{%static 'js/jquery.form.js' %}"></script>
+<script src="{%static 'js/jquery.validate.min.js' %}"></script>
+<script src="{%static 'js/mail-script.js' %}"></script>
+
+<script src="{%static 'js/main.js' %}"></script>
+
+<script>
+    $('#datepicker').datepicker({
+        iconsLibrary: 'fontawesome',
+        disableDaysOfWeek: [0, 0],
+    //     icons: {
+    //      rightIcon: '<span class="fa fa-caret-down"></span>'
+    //  }
+    });
+    $('#datepicker2').datepicker({
+        iconsLibrary: 'fontawesome',
+        icons: {
+        rightIcon: '<span class="fa fa-caret-down"></span>'
+    }
+
+    });
+    var timepicker = $('#timepicker').timepicker({
+    format: 'HH.MM'
+});
+</script>
+
+<script>
+    {% if thank %}
+    alert('Your Complaint is submitted. We will look for it!');
+    document.location = "{%url 'Services:contact' %}";
+    {% endif %}
+</script>
+
+    
+</body>
+    
+</html>

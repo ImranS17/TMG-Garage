@@ -1,0 +1,719 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Online Garage Services</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{%static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{%static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{%static 'css/nice-select.css' %}">
+    <link rel="stylesheet" href="{%static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{%static 'css/gijgo.css' %}">
+    <link rel="stylesheet" href="{%static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{%static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="css/responsive.css' %}"> -->
+</head>
+
+<body>
+    
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo-img">
+                                <a href="{%url 'Services:home' %}">
+                                    <img src="{%static 'img/logo1.png' %}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="menu_wrap d-none d-lg-block">
+                                <div class="menu_wrap_inner d-flex align-items-center justify-content-end">
+                                    <div class="main-menu">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a class="active" href="{%url 'Services:home' %}">home</a></li>
+                                                <li><a href="{%url 'Services:service' %}">service</a></li>
+                                                <li><a href="{%url 'Services:about' %}">about</a></li>
+                                                <li><a href="{%url 'Services:contact' %}">contact</a></li>
+                                                {% if user.is_authenticated %}
+                                                <li><a href="{%url 'Services:logout' %}">logout</a></li>
+                                                {% endif %}
+                                                <li><a id="popcart" data-toggle="popover" data-placement="bottom" data-html="true">
+                                                Cart(<span id="cart">0</span>)</button></a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- bradcam_area_start -->
+    <div class="bradcam_area breadcam_bg overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Services</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end -->
+
+
+    <!-- Service Start -->
+    <div class="team_area">
+        <div class="23624">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-10">
+                    <div class="section_title text-center mb-55">
+                        <h3>Car Services ♥ </h3>
+                    </div>
+                </div>
+            </div>
+    <div class="row">
+        <div class="column">
+            <h2>Battery</h2>
+            <p><button id="pr(0)"class="cart">Inspection......................Rs 150</button></p>
+            <p><button id="pr(1)"class="cart">Battery Boost......................Rs 460</button></p>
+            <p><button id="pr(2)"class="cart">Battery Cable Replacement.....................Rs 640</button></p>
+            <p><button id="pr(3)"class="cart">Battery Replacement......................Rs 6160</button></p>
+            <p><button id="pr(4)"class="cart">Battery Temperature Sensor Replacement.....................Rs 560</button></p>
+            <p><button id="pr(5)"class="cart">Negative Battery Terminal Replacement.....................Rs 260</button></p>
+            <p><button id="pr(6)"class="cart">Positive Battery Terminal Replacement.....................Rs 260</button></p>
+            <p><button id="pr(7)"class="cart">Service Battery And Cables.....................Rs 660</button></p>
+        </div>
+        <div class="column">
+            <h2>Filters</h2>
+            <p><button id="pr(8)"class="cart">AC Fan Control Module Replacement......................Rs 460</button></p>
+            <p><button id="pr(9)"class="cart">Air Filter Replacement..................Rs 620</button></p>
+            <p><button id="pr(10)"class="cart">Air Pump Filter Replacement.....................Rs 562</button></p>
+            <p><button id="pr(11)"class="cart">Cabin Air Filter Replacement................Rs 365</button></p>
+            <p><button id="pr(12)"class="cart">Crankcase Vent Filter Replacement.................Rs 630</button></p>
+            <p><button id="pr(13)"class="cart">Fuel Filter Replacement...............Rs 960</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Belts</h2>
+            <p><button id="pr(14)"class="cart">Drive Belt Tensioner Replacement......................Rs 460</button></p>
+            <p><button id="pr(15)"class="cart">Timing Belt Replacement......................Rs 1450</button></p>
+        </div>
+        <div class="column">
+            <h2>Maintenance</h2>
+            <p><button id="pr(16)"class="cart">Fuse Replacement....................Rs 1520</button></p>
+            <p><button id="pr(17)"class="cart">Scheduled Maintenance......................Rs 3200</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Brakes</h2>
+            <p><button id="pr(18)"class="cart">ABS Control Module Replacement......................Rs 460</button></p>
+            <p><button id="pr(19)"class="cart">ABS Control Module System Reset..................Rs 360</button></p>
+            <p><button id="pr(20)"class="cart">ABS Speed Sensor Replacement.......................Rs 500</button></button></p>
+            <p><button id="pr(21)"class="cart">Anti Lock Brake (ABS) Fluid Level Sensor Replacement..............Rs 450</button></p>
+            <p><button id="pr(22)"class="cart">Anti Lock Control Relay Replacement..................Rs 630</button></p>
+            <p><button id="pr(23)"class="cart">Anti Lock Fuses Or Relay Replacement...............Rs 1200</button></p>
+            <p><button id="pr(24)"class="cart">Anti Lock Pressure Switch Replacement...................Rs 520</button></p>
+            <p><button id="pr(25)"class="cart">Brake Booster Replacement......................Rs 460</button></p>
+            <p><button id="pr(26)"class="cart">Brake Booster Vacuum Sensor Replacement........................Rs 530</button></p>
+            <p><button id="pr(27)"class="cart">Brake Caliper Replacement......................Rs 630</button></p>
+            <p><button id="pr(28)"class="cart">Brake Drums Replacement.............................Rs 5000</button></p>
+            <p><button id="pr(29)"class="cart">Brake Hose Replacement........................Rs 6200</button></p>
+            <p><button id="pr(30)"class="cart">Brake Line Repair.........................Rs 470</button></p>
+            <p><button id="pr(31)"class="cart">Brake Master Cylinder Replacement......................Rs 460</button></p>
+            <p><button id="pr(32)"class="cart">Brake Pads And Rotors Replacement......................Rs 700</button></p>
+            <p><button id="pr(33)"class="cart">Brake Pads Replacement...........................Rs 750</button></p>
+            <p><button id="pr(34)"class="cart">Brake Rotors Replacement........................Rs 850</button></p>
+            <p><button id="pr(35)"class="cart">Brake Service..........................Rs 200</button></p>
+            <p><button id="pr(36)"class="cart">Brake Shoes (Rear) Replacement................................Rs 530</button></p>
+            <p><button id="pr(37)"class="cart">Brake System Flush.................................Rs 4200</button></p>
+            <p><button id="pr(38)"class="cart">Emergency Brake Control Replacement...................Rs 1200</button></p>
+            <p><button id="pr(39)"class="cart">Vacuum Brake Booster Check Valve Replacement.....................Rs 5000</button></p>
+            <p><button id="pr(40)"class="cart">Wheel Hub Assembly Replacement......................Rs 460</button></p>
+        </div>
+        <div class="column">
+            <h2>Clutch And Transmission</h2>
+            <p><button id="pr(41)"class="cart">Axle Shaft Seal Replacement..........................Rs 800</button></p>
+            <p><button id="pr(42)"class="cart">CV Axle Shaft Assembly Replacement......................Rs 460</button></p>
+            <p><button id="pr(43)"class="cart">Center Support Bearing Replacement.........................Rs 850</button></p>
+            <p><button id="pr(44)"class="cart">Clutch Cable Adjuster Replacement...........................Rs 960</button></p>
+            <p><button id="pr(45)"class="cart">Clutch Cable Replacement......................Rs 460</button></p>
+            <p><button id="pr(46)"class="cart">Clutch Fluid Replacement.......................Rs 420</button></p>
+            <p><button id="pr(47)"class="cart">Clutch Master Cylinder Replacement.......................Rs 2200</button></p>
+            <p><button id="pr(48)"class="cart">Clutch Slave Cylinder Replacement..........................Rs 1000</button></p>
+            <p><button id="pr(49)"class="cart">Clutch Switch Replacement.......................Rs 2000</button></p>
+            <p><button id="pr(50)"class="cart">Cruise Control Clutch Release Switch Replacement....................Rs 3000</button></p>
+            <p><button id="pr(51)"class="cart">Differential Gasket Replacement......................Rs 460</button></p>
+            <p><button id="pr(52)"class="cart">Differential Output Seal Replacement..................Rs 4000</button></p>
+            <p><button id="pr(53)"class="cart">Downshift Solenoid Replacement..........................Rs 5200</button></p>
+            <p><button id="pr(54)"class="cart">Flexible Clutch Hose Replacement......................Rs 460</button></p>
+            <p><button id="pr(55)"class="cart">Front Axle Engagement Switch Replacement......................Rs 650</button></p>
+            <p><button id="pr(56)"class="cart">Kick Down Cable Replacement...............................Rs 1650</button></p>
+            <p><button id="pr(57)"class="cart">Pinion Seal Replacement...........................Rs 2400</button></p>
+            <p><button id="pr(58)"class="cart">Shift Indicator (Automatic Transmission) Replacement..............................Rs 5200</button></p>
+            <p><button id="pr(59)"class="cart">Transmission Fluid Flush.......................Rs 6200</button></p>
+            <p><button id="pr(60)"class="cart">Transmission Speed Sensor Replacement......................Rs 460</button></p>
+            <p><button id="pr(61)"class="cart">Transmission Oil Pressure Switch Replacement..........................Rs 5200</button></p>
+            <p><button id="pr(62)"class="cart">Transfer Case Output Shaft Seal Replacement..........................Rs 6200</button></p>
+            <p><button id="pr(63)"class="cart">Transmission Position Sensor (Switch) Replacement......................Rs 7000</button></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Diagnostics And Inspections</h2>
+            <p><button id="pr(64)"class="cart">Arbitration Inspection........................Rs 5000</button></p>
+            <p><button id="pr(65)"class="cart">Car Is Leaking Fluids Inspection......................Rs 1300</button></p>
+            <p><button id="pr(66)"class="cart">Car Is Not Starting Inspection.........................Rs 2200</button></p>
+            <p><button id="pr(67)"class="cart">Car Is Overheating Inspection.........................Rs 5200</button></p>
+            <p><button id="pr(68)"class="cart">Car Is Shaking (Vibrating) Inspection......................Rs 460</button></p>
+            <p><button id="pr(69)"class="cart">Check Engine Light Is On Inspection........................Rs 250</button></p>
+            <p><button id="pr(70)"class="cart">Drive Clean Test...................................Rs 1200</button></p>
+            <p><button id="pr(71)"class="cart">Emissions Test................................Rs 1500</button></p>
+            <p><button id="pr(72)"class="cart">Follow Up Service..................Rs 500</button></p>
+            <p><button id="pr(73)"class="cart">Safety Standards Certificate Inspection......................Rs 460</button></p>
+            <p><button id="pr(74)"class="cart">Warning Light Is On Inspection....................................Rs 500</button></p>
+            <p><button id="pr(75)"class="cart">License Plate Bracket Repair.....................................Rs 630</button></p>
+        </div>
+        <div class="column">
+            <h2>Exhaust System</h2>
+            <p><button id="pr(76)"class="cart">Catalytic Converter Replacement..........................Rs 530</button></p>
+            <p><button id="pr(77)"class="cart">EGR Control Solenoid Replacement................................Rs 1500</button></p>
+            <p><button id="pr(78)"class="cart">EGR Pressure Feedback Sensor Replacement........................Rs 6200</button></p>
+            <p><button id="pr(79)"class="cart">EGR Temperature Sensor Replacement........................Rs 530</button></p>
+            <p><button id="pr(80)"class="cart">EGR Vacuum Modulator Replacement......................Rs 460</button></p>
+            <p><button id="pr(81)"class="cart">EVP Position Sensor Replacement.......................Rs 420</button></p>
+            <p><button id="pr(82)"class="cart">EVP Shut Off Solenoid Replacement........................Rs 620</button></p>
+            <p><button id="pr(83)"class="cart">Evaporation Vent Solenoid Replacement.......................Rs 5200</button></p>
+            <p><button id="pr(84)"class="cart">Evaporative Emission Control Canister Replacement................................Rs 1500</button></p>
+            <p><button id="pr(85)"class="cart">Evaporator Temperature Sensor (Switch) Replacement........................Rs 4200</button></p>
+            <p><button id="pr(86)"class="cart">Pressure Control Valve Replacement......................Rs 460</button></p> 
+            <p><button id="pr(87)"class="cart">Exhaust Repair........................Rs 3200</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Doors</h2>
+            <p><button id="pr(88)"class="cart">Door Latch Replacement........................Rs 6200</button></p>
+            <p><button id="pr(89)"class="cart">Door Lock Actuator Replacement..........................Rs 530</button></p>
+            <p><button id="pr(90)"class="cart">Door Lock Relay Replacement................................Rs 1500</button></p>
+            <p><button id="pr(91)"class="cart">Door Lock Switch Replacement.............................Rs 500</button></p>
+            <p><button id="pr(92)"class="cart">Door Striker Plate Replacement......................Rs 460</button></p>
+            <p><button id="pr(93)"class="cart">Exterior Door Handle Replacement......................Rs 1000</button></p>
+            <p><button id="pr(94)"class="cart">Hatch Lock Cylinder Replacement........................Rs 6200</button></p>
+            <p><button id="pr(95)"class="cart">Hood Latc Repair...........................Rs 5300</button></p>
+            <p><button id="pr(96)"class="cart">Hood Lift Support Shocks Replacement........................Rs 4000</button></p>
+            <p><button id="pr(97)"class="cart">Interior Door Handle Replacement......................Rs 460</button></p>
+            <p><button id="pr(98)"class="cart">Lubricate Doors...................................Rs 3000</button></p>  
+            <p><button id="pr(99)"class="cart">Lubricate Hood Hinge..........................Rs 2000</button></p> 
+            <p><button id="pr(100)"class="cart">Lubricate Trunk..........................Rs 1000</button></p>
+            <p><button id="pr(101)"class="cart">Sliding Door Motor Assembly Replacement..........................Rs 530</button></p>
+            <p><button id="pr(102)"class="cart">Tailgate Lock Cylinder Replacement........................Rs 6000</button></p>
+            <p><button id="pr(103)"class="cart">Tailgate Lock Solenoid Replacement........................Rs 6200</button></p>
+            <p><button id="pr(104)"class="cart">Tailgate Locking Assembly Replacement..........................Rs 4000</button></p>
+            <p><button id="pr(105)"class="cart">Trunk Latch Adjustment................................Rs 1500</button></p>
+            <p><button id="pr(106)"class="cart">Trunk Latch Release Cable Replacement......................Rs 600</button></p>
+            <p><button id="pr(107)"class="cart">Trunk Latch Replacement......................Rs 700</button></p>
+            <p><button id="pr(108)"class="cart">Trunk Lift Support Shocks Replacement......................Rs 460</button></p>
+            <p><button id="pr(109)"class="cart">Trunk Lock Actuator Replacement.....................Rs 900</button></p>
+            <p><button id="pr(110)"class="cart">Trunk Striker Plate Replacement................................Rs 1500</button></p>
+        </div>
+        <div class="column">
+            <h2>Lights</h2>
+            <p><button id="pr(111)"class="cart">Brake Light Bulb Replacement.......................Rs 960</button></p>
+            <p><button id="pr(112)"class="cart">Brake Light Switch Replacement..........................Rs 530</button></p>
+            <p><button id="pr(113)"class="cart">Combination Switch Assembly Replacement.......................Rs 650</button></p>
+            <p><button id="pr(114)"class="cart">Console Light Bulb Replacement........................Rs 800</button></p>
+            <p><button id="pr(115)"class="cart">Courtesy Light Switch Replacement.......................Rs 420</button></p>
+            <p><button id="pr(116)"class="cart">Daytime Running Lamp Module Replacement......................Rs 460</button></p>
+            <p><button id="pr(117)"class="cart">Dome Light Bulb Replacement.......................Rs 1600</button></p>
+            <p><button id="pr(118)"class="cart">Fog (Driving) Light Bulb Replacement.......................Rs 5200</button></p>
+            <p><button id="pr(119)"class="cart">Fog Light Relay Replacement...................Rs 400</button></p>
+            <p><button id="pr(120)"class="cart">Fog Light Switch Replacement......................Rs 300</button></p>
+            <p><button id="pr(121)"class="cart">Hazard (Turn) Signal Flasher Replacement......................Rs 460</button></p>
+            <p><button id="pr(122)"class="cart">Headlamp Dimmer Switch Replacement.....................Rs 2300</button></p>
+            <p><button id="pr(123)"class="cart">Headlight Bulb Replacement.......................Rs 420</button></p>
+            <p><button id="pr(124)"class="cart">Headlight Closure Relay Replacement.....................Rs 500</button></p>
+            <p><button id="pr(125)"class="cart">Headlight Door Motor Replacement.......................Rs 5200</button></p>
+            <p><button id="pr(126)"class="cart">Headlight Switch Replacement..............................Rs 500</button></p>
+            <p><button id="pr(127)"class="cart">License Plate Light Replacement................................Rs 1500</button></p>
+            <p><button id="pr(128)"class="cart">Reset Indicator Lights Replacement.......................Rs 4700</button></p>
+            <p><button id="pr(129)"class="cart">Reverse Light Bulb Replacement........................Rs 4000</button></p>
+            <p><button id="pr(130)"class="cart">Tail Lamp Bulb Replacement........................Rs 6200</button></p>
+            <p><button id="pr(131)"class="cart">Tail Light Lens Replacement........................Rs 560</button></p>
+            <p><button id="pr(132)"class="cart">Trunk Light Bulb Replacement......................Rs 460</button></p>
+            <p><button id="pr(133)"class="cart">Turn Signal Bulb Replacement......................Rs 520</button></p>
+            <p><button id="pr(134)"class="cart">Turn Signal Switch Replacement.........................Rs 560</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Engine</h2>
+            <p><button id="pr(135)"class="cart">Accelerator Cable Replacement..........................Rs 530</button></p>
+            <p><button id="pr(136)"class="cart">Accelerator Pump Replacement..........................Rs 400</button></p>
+            <p><button id="pr(137)"class="cart">Air Bleed Housing Assembly Replacement..........................Rs 500</button></p>
+            <p><button id="pr(138)"class="cart">Air Diverter Valve Replacement........................Rs 6200</button></p>
+            <p><button id="pr(139)"class="cart">Air Pump Check Valve Replacement......................Rs 460</button></p>
+            <p><button id="pr(140)"class="cart">Air Pump Replacement..........................Rs 5300</button></p>
+            <p><button id="pr(141)"class="cart">Alternator Replacement..........................Rs 650</button></p>
+            <p><button id="pr(142)"class="cart">Automatic Shutdown Relay Replacement................................Rs 1500</button></p>
+            <p><button id="pr(143)"class="cart">Automatic Timing Advance Unit Replacement.......................Rs 420</button></p>
+            <p><button id="pr(144)"class="cart">Battery Terminal Ends Replacement........................Rs 6200</button></p>
+            <p><button id="pr(145)"class="cart">Camshaft Seal Replacement......................Rs 460</button></p>
+            <p><button id="pr(146)"class="cart">Carburetor Replacement..........................Rs 6000</button></p>
+            <p><button id="pr(147)"class="cart">Cold Air Intake Replacement.......................Rs 5200</button></p>
+            <p><button id="pr(148)"class="cart">Cold Start Injector Replacement..........................Rs 530</button></p>
+            <p><button id="pr(149)"class="cart">Connector Hose Heater Control Valve Replacement................................Rs 1500</button></p>
+            <p><button id="pr(150)"class="cart">Coolant Reservoir Replacement........................Rs 6200</button></p>
+            <p><button id="pr(151)"class="cart">Coolant Temperature Switch (Sensor) Replacement..........................Rs 650</button></p>
+            <p><button id="pr(152)"class="cart">Coolant Tube Replacement..........................Rs 900</button></p>
+            <p><button id="pr(153)"class="cart">Coolant Vacuum Valve Switch Replacement..........................Rs 530</button></p>
+            <p><button id="pr(154)"class="cart">Cooling (Radiator) Fan Motor Replacement..........................Rs 700</button></p>
+            <p><button id="pr(155)"class="cart">Cooling Fan Relay Replacement..........................Rs 800</button></p>
+            <p><button id="pr(156)"class="cart">Cooling Fan Resistor Replacement..........................Rs 900</button></p>
+            <p><button id="pr(157)"class="cart">Cooling System Flush......................Rs 460</button></p>
+            <p><button id="pr(158)"class="cart">Crankshaft Harmonic Balancer Replacement..........................Rs 1530</button></p>
+            <p><button id="pr(159)"class="cart">Cruise Control Vacuum Reservoir Replacement........................Rs 6200</button></p>
+            <p><button id="pr(160)"class="cart">Cylinder Head Temperature Sensor Replacement.......................Rs 420</button></p>
+            <p><button id="pr(161)"class="cart">Distributor O Ring Replacement................................Rs 1500</button></p>
+            <p><button id="pr(162)"class="cart">Distributor Replacement..........................Rs 2530</button></p>
+            <p><button id="pr(163)"class="cart">Distributor Rotor And Cap Replacement..........................Rs 3530</button></p>
+            <p><button id="pr(164)"class="cart">ECM Power Relay Replacement..........................Rs 530</button></p>
+            <p><button id="pr(165)"class="cart">EGR Cooler Replacement..........................Rs 800</button></p>
+            <p><button id="pr(166)"class="cart">Electronic Ignition Pickup Replacement..........................Rs 4530</button></p>
+            <p><button id="pr(167)"class="cart">Electronic Spark Control Replacement........................Rs 6200</button></p>
+            <p><button id="pr(168)"class="cart">Engine Cooling Fan Replacement..........................Rs 5530</button></p>
+            <p><button id="pr(169)"class="cart">Engine Mount Replacement......................Rs 460</button></p>
+            <p><button id="pr(170)"class="cart">Exhaust Flex Pipe Replacement..........................Rs 6530</button></p>
+            <p><button id="pr(171)"class="cart">Exhaust Gas Recirculation (EGR) Tube Replacement..........................Rs 530</button></p>
+            <p><button id="pr(172)"class="cart">Exhaust Gas Recirculation (EGR) Valve Replacement................................Rs 1500</button></p>
+            <p><button id="pr(173)"class="cart">Exhaust Manifold Gasket Replacement..........................Rs 5300</button></p>
+            <p><button id="pr(174)"class="cart">Exhaust Manifold Replacement........................Rs 6200</button></p>
+            <p><button id="pr(175)"class="cart">Fan Clutch Replacement......................Rs 460</button></p>
+            <p><button id="pr(176)"class="cart">Front Crankshaft Seal Replacement..........................Rs 530</button></p>
+            <p><button id="pr(177)"class="cart">Fuse Replacement..........................Rs 600</button></p>
+            <p><button id="pr(178)"class="cart">Head Gasket Replacement..........................Rs 800</button></p>
+            <p><button id="pr(179)"class="cart">Heater Bypass Tube Replacement..........................Rs 530</button></p>
+            <p><button id="pr(180)"class="cart">Heater Hoses Replacement..........................Rs 2000</button></p>
+            <p><button id="pr(181)"class="cart">High Pressure Safety Valve Replacement......................Rs 460</button></p>
+            <p><button id="pr(182)"class="cart">Idle Control Valve Replacement..........................Rs 3000</button></p>
+            <p><button id="pr(183)"class="cart">Idler Pulley Replacement..........................Rs 530</button></p>
+            <p><button id="pr(184)"class="cart">Intake Manifold Gaskets Replacement........................Rs 6200</button></p>
+        </div>
+        <div class="column">
+            <h2>Suspension And Steering</h2>
+            <p><button id="pr(185)"class="cart"> Air Springs Replacement..........................Rs 530</button></p>
+            <p><button id="pr(186)"class="cart"> Air Suspension Air Compressor Replacement..........................Rs 5300</button></p>
+            <p><button id="pr(187)"class="cart"> Air Suspension Dryer Assembly Replacement........................Rs 6200</button></p>
+            <p><button id="pr(188)"class="cart">Ball Joint Front Replacement..........................Rs 430</button></p>
+            <p><button id="pr(189)"class="cart"> Ball Joint Rear Replacement................................Rs 1500</button></p>
+            <p><button id="pr(190)"class="cart"> CV Axle Shaft Assembly Replacement......................Rs 460</button></p>
+            <p><button id="pr(191)"class="cart"> Center (Drag) Link Replacement........................Rs 6200</button></p>
+            <p><button id="pr(192)"class="cart"> Control Arm Assembly Replacement.......................Rs 5200</button></p>
+            <p><button id="pr(193)"class="cart"> Differential (Gear) Oil Replacement..........................Rs 350</button></p>
+            <p><button id="pr(194)"class="cart"> Drag Link Replacement..........................Rs 850</button></p>
+            <p><button id="pr(195)"class="cart"> Driveshaft Replacement........................Rs 6200</button></p>
+            <p><button id="pr(196)"class="cart"> Flex Coupling Steering Damper Replacement..........................Rs 800</button></p>
+            <p><button id="pr(197)"class="cart"> Lateral Link Replacement..........................Rs 530</button></p>
+            <p><button id="pr(198)"class="cart"> Lubricate Ball Joints......................Rs 460</button></p>
+            <p><button id="pr(199)"class="cart"> Lubricate Driveshaft..........................Rs 1530</button></p>
+            <p><button id="pr(200)"class="cart"> Lubricate Steering And Suspension..........................Rs 2530</button></p>
+            <p><button id="pr(201)"class="cart">Lubricate Suspension..........................Rs 530</button></p>
+            <p><button id="pr(202)"class="cart"> Lubricate U Joints................................Rs 1500</button></p>
+            <p><button id="pr(203)"class="cart"> Pitman Arm Replacement..........................Rs 530</button></p>
+            <p><button id="pr(204)"class="cart"> Pitman Arm Shaft Seal Replacement..........................Rs 5230</button></p>
+            <p><button id="pr(205)"class="cart"> Power Steering Control Valve Replacement......................Rs 460</button></p>
+            <p><button id="pr(206)"class="cart"> Power Steering Fluid Reservoir Replacement..........................Rs 530</button></p>
+            <p><button id="pr(207)"class="cart"> Power Steering Fluid Service..........................Rs 5300</button></p>
+            <p><button id="pr(208)"class="cart"> Power Steering Input Shaft Seal Replacement........................Rs 6200</button></p>
+            <p><button id="pr(209)"class="cart"> Power Steering Pressure Hose Replacement......................Rs 460</button></p>
+            <p><button id="pr(210)"class="cart"> Power Steering Pressure Switch Replacement..........................Rs 530</button></p>
+            <p><button id="pr(211)"class="cart"> Power Steering Pump Pulley Replacement................................Rs 1500</button></p>
+            <p><button id="pr(212)"class="cart"> Power Steering Pump Replacement..........................Rs 800</button></p>
+            <p><button id="pr(213)"class="cart"> Power Steering Return Hose Replacement......................Rs </button>460</p>
+            <p><button id="pr(214)"class="cart"> Shock Absorber Replacement..........................Rs 530</button></p>
+            <p><button id="pr(215)"class="cart"> Spring Insulators Replacement..........................Rs 5320</button></p>
+            <p><button id="pr(216)"class="cart"> Stabilizer Bar Bushings Replacement..........................Rs 800</button></p>
+            <p><button id="pr(217)"class="cart"> Stabilizer Bar Links Replacement..........................Rs 5300</button></p>
+            <p><button id="pr(218)"class="cart"> Steering Angle Sensor Replacement..........................Rs 430</button></p>
+            <p><button id="pr(219)"class="cart"> Steering Column Actuator Replacement..........................Rs 530</button></p>
+            <p><button id="pr(220)"class="cart"> Steering Damper Replacement..........................Rs 2300</button></p>
+            <p><button id="pr(221)"class="cart"> Steering Gear Adjuster Plug Replacement........................Rs 6200</button></p>
+            <p><button id="pr(222)"class="cart"> Steering Rack (Gearbox) Replacement..........................Rs 530</button></p>
+            <p><button id="pr(223)"class="cart"> Steering Rack Mounting Bushings Replacement..........................Rs 6200</button></p>
+            <p><button id="pr(224)"class="cart"> Steering Rack Replacement..........................Rs 530</button></p>
+            <p><button id="pr(225)"class="cart"> Steering Stabilizer Stop Replacement..........................Rs 800</button></p>
+            <p><button id="pr(226)"class="cart"> Strut Assembly Replacement................................Rs 1500</button></p>
+            <p><button id="pr(227)"class="cart"> Suspension Air Bag Replacement..........................Rs 820</button></p>
+            <p><button id="pr(228)"class="cart"> Suspension Springs Replacement..........................Rs 530</button></p>
+            <p><button id="pr(229)"class="cart"> Suspension Strut Mount Replacement.......................Rs 420</button></p>
+            <p><button id="pr(230)"class="cart"> Tie Rod End Replacement..........................Rs 800</button></p>
+            <p><button id="pr(231)"class="cart"> Tighten Wheel Lug Nuts..........................Rs 530</button></p>
+            <p><button id="pr(214)"class="cart"> Track Bar Replacement......................Rs 460</button></p>
+            <p><button id="pr(215)"class="cart"> Trailing Arm Bushings Replacement..........................Rs 1300</button></p>
+            <p><button id="pr(216)"class="cart"> Universal Joint (U joint) Replacement..........................Rs 530</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Fluids</h2>
+            <p><button id="pr(217)"class="cart"> Brake System Flush..........................Rs 530</button></p>
+            <p><button id="pr(218)"class="cart"> Clutch Fluid Replacement..........................Rs 5200</button></p>
+            <p><button id="pr(219)"class="cart"> Cooling System Flush........................Rs 6200</button></p>
+            <p><button id="pr(220)"class="cart"> Differential Fluid Replacement..........................Rs 800</button></p>
+            <p><button id="pr(221)"class="cart"> Oil And Filter Change.......................Rs 420</button></p>
+            <p><button id="pr(222)"class="cart"> Power Steering Fluid Service......................Rs 460</button></p>
+            <p><button id="pr(223)"class="cart"> Recharge Diesel Emissions Fluid Replacement..........................Rs 890</button></p>
+            <p><button id="pr(224)"class="cart"> Top Off Coolant..........................Rs 630</button></p>
+            <p><button id="pr(225)"class="cart"> Transfer Case Fluid Replacement..........................Rs 5300</button></p>
+            <p><button id="pr(226)"class="cart"> Transmission Fluid Service................................Rs 1500</button></p>
+        </div>
+        <div class="column">
+            <h2>Fuel System</h2>
+            <p><button id="pr(227)"class="cart"> Carburetor Replacement..........................Rs 5630</button></p>
+            <p><button id="pr(228)"class="cart"> Fuel Filler Neck Replacement.......................Rs 420</button></p>
+            <p><button id="pr(229)"class="cart"> Fuel Filter Replacement................................Rs 1500</button></p>
+            <p><button id="pr(230)"class="cart"> Fuel Gauge Sender Replacement..........................Rs 530</button></p>
+            <p><button id="pr(231)"class="cart"> Fuel Injector O Rings Replacement......................Rs 460</button></p>
+            <p><button id="pr(232)"class="cart"> Fuel Injector Replacement..........................Rs 1520</button></p>
+            <p><button id="pr(233)"class="cart"> Fuel Meter Assembly Replacement........................Rs 6200</button></p>
+            <p><button id="pr(234)"class="cart"> Fuel Pressure Regulator Replacement.......................Rs 420</button></p>
+            <p><button id="pr(235)"class="cart"> Fuel Pressure Sensor Replacement..........................Rs 530</button></p>
+            <p><button id="pr(236)"class="cart"> Fuel Pump Relay Replacement..........................Rs 1800</button></p>
+            <p><button id="pr(237)"class="cart"> Fuel Pump Replacement................................Rs 1500</button></p>
+            <p><button id="pr(238)"class="cart"> Fuel Pump Shut Off Switch Replacement..........................Rs 6500</button></p>
+            <p><button id="pr(239)"class="cart"> Gas Cap Replacement........................Rs 6200</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Heating And AC</h2>
+            <p><button id="pr(240)"class="cart"> AC Compressor Replacement..........................Rs 530</button></p>
+            <p><button id="pr(241)"class="cart"> AC Condensor Replacement........................Rs 6200</button></p>
+            <p><button id="pr(242)"class="cart"> AC Evaporator Replacement..........................Rs 650</button></p>
+            <p><button id="pr(243)"class="cart"> AC Freon Recharge.......................Rs 420</button></p>
+            <p><button id="pr(244)"class="cart"> AC Line Leak Repair..........................Rs 5300</button></p>
+            <p><button id="pr(245)"class="cart"> AC Pressure Switch Replacement..........................Rs 530</button></p>
+            <p><button id="pr(246)"class="cart"> Ambient Temperature Sensor (Switch) Replacement..........................Rs 2500</button></p>
+            <p><button id="pr(247)"class="cart"> Blower Motor Relay Replacement..........................Rs 3500</button></p>
+            <p><button id="pr(248)"class="cart"> Blower Motor Switch Replacement..........................Rs 4500</button></p>
+            <p><button id="pr(249)"class="cart"> Condenser Fan Relay Replacement................................Rs 1500</button></p>
+            <p><button id="pr(250)"class="cart"> Expansion Valve (Orifice Tube) Replacement..........................Rs 530</button></p>
+            <p><button id="pr(251)"class="cart"> Heater Blower Motor Replacement.......................Rs 4200</button></p>
+            <p><button id="pr(252)"class="cart"> Heater Blower Motor Resistor Replacement..........................Rs 620</button></p>
+            <p><button id="pr(253)"class="cart"> Heater Control Valve Replacement..........................Rs 6230</button></p>
+            <p><button id="pr(254)"class="cart"> Radiator Hose Replacement..........................Rs 530</button></p>
+        </div>
+        <div class="column">
+            <h2>Sensors</h2>
+            <p><button id="pr(255)"class="cart"> ABS Speed Sensor Replacement.......................Rs 420</button></p>
+            <p><button id="pr(256)"class="cart"> Camshaft Position Sensor Replacement..........................Rs 850</button></p> 
+            <p><button id="pr(257)"class="cart"> Coolant Level Sensor Replacement..........................Rs 530</button></p>
+            <p><button id="pr(258)"class="cart"> Crankshaft Position Sensor Replacement..........................Rs 950</button></p>
+            <p><button id="pr(259)"class="cart"> Instrument Voltage Regulator Replacement..........................Rs 1050</button></p>
+            <p><button id="pr(260)"class="cart"> Intermittent Wiper Relay Replacement................................Rs 1500</button></p>
+            <p><button id="pr(261)"class="cart"> Low Oil Level Sensor Replacement..........................Rs 650</button></p>
+            <p><button id="pr(262)"class="cart"> Manifold Temperature Sensor Replacement........................Rs 6200</button></p>
+            <p><button id="pr(263)"class="cart"> Mass Airflow Sensor Replacement..........................Rs 530</button></p>
+            <p><button id="pr(264)"class="cart"> Oil Temperature Sensor Replacement.......................Rs 5200</button></p>
+            <p><button id="pr(265)"class="cart"> Oxygen Sensor Replacement..........................Rs 4500</button></p>
+            <p><button id="pr(266)"class="cart"> Speed Timing Sensor Replacement.......................Rs 420</button></p>
+            <p><button id="pr(267)"class="cart"> Speedometer Sensor Replacement..........................Rs 530</button></p>
+            <p><button id="pr(268)"class="cart"> Thermostatic Vacuum Sensor Replacement..........................Rs 4620</button></p>
+            <p><button id="pr(269)"class="cart"> Throttle Position Sensor Replacement.......................Rs 420</button></p>
+            <p><button id="pr(270)"class="cart"> Yaw Rate Sensor Replacement.............................Rs 560</button></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <h2>Hoses</h2>
+            <p><button id="pr(271)"class="cart"> Air Injection Hose Replacement........................Rs 450</button></p>
+            <p><button id="pr(272)"class="cart"> Brake Hose Replacement..........................Rs 570</button></p>
+            <p><button id="pr(273)"class="cart"> Exhaust Gas Recirculation (EGR) Tube Replacement......................Rs 500</button></p>
+            <p><button id="pr(274)"class="cart"> Heater Bypass Tube Replacement...................Rs 530</button></p>
+            <p><button id="pr(275)"class="cart"> Power Steering Pressure Hose Replacement........................Rs 520</button></p>
+            <p><button id="pr(276)"class="cart"> Power Steering Return Hose Replacement................Rs 1120</button></p>
+            <p><button id="pr(277)"class="cart"> Radiator Hose Replacement.....................Rs 520</button></p>
+        </div>
+        <div class="column">
+            <h2>Ignition</h2>
+            <p><button id="pr(278)"class="cart"> Ballast Resistor Replacement.............................Rs 520</button></p>
+            <p><button id="pr(279)"class="cart"> Distributor Rotor And Cap Replacement.................................Rs 520</button></p>
+            <p><button id="pr(280)"class="cart"> Electronic Ignition Pickup Replacement..............................Rs 420</button></p>
+            <p><button id="pr(281)"class="cart"> Ignition Cable (Spark Plug Wires) Replacement......................Rs 620</button></p>
+            <p><button id="pr(282)"class="cart"> Ignition Coil Replacement...........................Rs 780</button></p>
+            <p><button id="pr(283)"class="cart"> Ignition Ignitor Replacement......................Rs 700</button></p>
+            <p><button id="pr(284)"class="cart"> Ignition Relay Replacement......................Rs 710</button></p>
+            <p><button id="pr(285)"class="cart"> Ignition Switch Replacement..............................Rs 5220</button></p>
+            <p><button id="pr(286)"class="cart"> Spark Plugs Replacement...................Rs 500</button></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>Switches</h2>
+            <p><button id="pr(287)"class="cart"> Backup Light Switch Replacement.....................Rs 5200</button></p>
+            <p><button id="pr(288)"class="cart"> Blower Motor Switch Replacement.......................Rs 400</button></p>
+            <p><button id="pr(289)"class="cart"> Brake Light Switch Replacement.....................Rs 500</button></p>
+            <p><button id="pr(290)"class="cart"> Clutch Switch Replacement.................Rs 1000</button></p>
+            <p><button id="pr(291)"class="cart"> Combination Switch Assembly Replacement.........................Rs 8000</button></p>
+            <p><button id="pr(292)"class="cart"> Cruise Control Brake Release Switch Replacement...........................Rs 4500</button></p>
+            <p><button id="pr(293)"class="cart"> Cruise Control Clutch Release Switch Replacement......................Rs 5620</button></p>
+            <p><button id="pr(294)"class="cart"> Cruise Control Switch Replacement....................Rs 5200</button></p>
+            <p><button id="pr(295)"class="cart"> Cruise Control Vacuum Bleed Switch Replacement..........................Rs 620</button></p>
+            <p><button id="pr(296)"class="cart"> Door Lock Switch Replacement..........................Rs 820</button></p>
+            <p><button id="pr(297)"class="cart"> Headlamp Dimmer Switch Replacement.....................Rs 4200</button></p>
+            <p><button id="pr(298)"class="cart"> Headlight Switch Replacement.............................Rs 5200</button></p>
+            <p><button id="pr(299)"class="cart"> Horn Relay Replacement......................Rs 6300</button></p>
+            <p><button id="pr(300)"class="cart"> Horn Switch Replacement...........................Rs 4200</button></p>
+            <p><button id="pr(301)"class="cart"> Neutral Safety Switch Replacement.......................Rs 5200</button></p>
+            <p><button id="pr(302)"class="cart"> Parking Brake Warning Switch Replacement....................Rs 2100</button></p>
+            <p><button id="pr(303)"class="cart"> Power Seat Switch Replacement..........................Rs 3000</button></p>
+            <p><button id="pr(304)"class="cart"> Power Window Switch Replacement.................................Rs 1100</button></p>
+            <p><button id="pr(305)"class="cart"> Rear Window Defogger Switch Replacement...........................Rs 1200</button></p>
+            <p><button id="pr(306)"class="cart"> Refrigerant Pressure Sensor (Switch) Replacement...................Rs 2200</button></p>
+            <p><button id="pr(307)"class="cart"> Starter Relay Replacement.............................Rs 3200</button></p>
+            <p><button id="pr(308)"class="cart"> Traction Control Switch Replacement.........................Rs 4200</button></p>
+            <p><button id="pr(309)"class="cart"> Turn Signal Switch Replacement..................................Rs 5200</button></p>
+        </div>
+        <div class="column">
+            <h2>Tires</h2>
+            <p><button id="pr(310)"class="cart"> Off Rim Tire Change And Rotation....................Rs 500</button></p>
+            <p><button id="pr(311)"class="cart"> On Rim Tire Change And Rotation..................Rs 1200</button></p>
+            <p><button id="pr(312)"class="cart"> Rim Leak Repair And Wheel Balancing.........................Rs 2300</button></p>
+            <p><button id="pr(313)"class="cart"> Rim Replacement...........................Rs 4100</button></p>
+            <p><button id="pr(314)"class="cart"> Seasonal Tire Replacement...........................Rs 620</button></p>
+            <p><button id="pr(315)"class="cart"> Spare Tire Installation........................Rs 5200</button></p>
+            <p><button id="pr(316)"class="cart"> Tire And Rim Replacement............................Rs 500</button></p>
+            <p><button id="pr(317)"class="cart"> Tire Inflation...............................Rs 4200</button></p>
+            <p><button id="pr(318)"class="cart"> Tire Pressure Monitoring System (TPMS) Reset.................Rs 5000</button></p>
+            <p><button id="pr(319)"class="cart"> Tire Repair............................Rs 650</button></p>
+            <p><button id="pr(320)"class="cart"> Tire Rotation..............................Rs 800</button></p>
+            <p><button id="pr(321)"class="cart"> Wheel Alignment...........................Rs 5600</button></p>
+            <p><button id="pr(322)"class="cart"> Wheel Balancing......................Rs 650</button></p>
+            <p><button id="pr(333)"class="cart"> Winter Tire Replacement...................................2300</button></p>
+        </div>
+    </div>
+
+    <!-- Service End -->    
+
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-md-6 col-lg-5 ">
+                        <div class="footer_widget">
+                            <div class="footer_logo">
+                                <a href="{%url 'Services:home' %}">
+                                <img src="{%static 'img/logo1.png' %}" alt=""></a>
+                                <div>
+                                    <p>&copy; 2020 TMG</p>
+                                    <p>9004710579</p>
+                                </div>
+                            </div>
+                            <p class="address_text">Janta Sevak Society <br> Mori Road Near Bus Depo <br> Mahim Mumbai-400016</p>
+                            <div class="social_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/Luxury-Cars/"target="_blank">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/luxurioustious/"target="_blank">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/petrolicious/"target="_blank">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-lg-3">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Information
+                            </h3>
+                            <ul class="links">
+                                <li><a href="{%url 'Services:home' %}">Home</a></li>
+                                <li><a href="{%url 'Services:about' %}">About</a></li>
+                                <li><a href="{%url 'Services:contact' %}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-2  col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Follow Us
+                            </h3>
+                            <ul class="links">
+                                <li><a href="https://www.facebook.com/Luxury-Cars/"target="_blank">FaceBook</a></li>
+                                <li><a href="https://www.instagram.com/petrolicious/"target="_blank">Instagram</a></li>
+                                <li><a href="https://twitter.com/luxurioustious/"target="_blank">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+
+    
+<!-- JS here -->
+<script src="{%static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{%static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{%static 'js/popper.min.js' %}"></script>
+<script src="{%static 'js/bootstrap.min.js' %}"></script>
+<script src="{%static 'js/owl.carousel.min.js' %}"></script>
+<script src="{%static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{%static 'js/ajax-form.js' %}"></script>
+<script src="{%static 'js/waypoints.min.js' %}"></script>
+<script src="{%static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{%static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{%static 'js/scrollIt.js' %}"></script>
+<script src="{%static 'js/jquery.scrollUp.min.js' %}"></script>
+<script src="{%static 'js/wow.min.js' %}"></script>
+<script src="{%static 'js/nice-select.min.js' %}"></script>
+<script src="{%static 'js/jquery.slicknav.min.js' %}"></script>
+<script src="{%static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{%static 'js/plugins.js' %}"></script>
+<script src="{%static 'js/gijgo.min.js' %}"></script>
+
+<!--contact js-->
+<script src="{%static 'js/contact.js' %}"></script>
+<script src="{%static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{%static 'js/jquery.form.js' %}"></script>
+<script src="{%static 'js/jquery.validate.min.js' %}"></script>
+<script src="{%static 'js/mail-script.js' %}"></script>
+
+<script src="{%static 'js/main.js' %}"></script>
+
+<script>
+    $('#datepicker').datepicker({
+        iconsLibrary: 'fontawesome',
+        disableDaysOfWeek: [0, 0],
+    //     icons: {
+    //      rightIcon: '<span class="fa fa-caret-down"></span>'
+    //  }
+    });
+    $('#datepicker2').datepicker({
+        iconsLibrary: 'fontawesome',
+        icons: {
+        rightIcon: '<span class="fa fa-caret-down"></span>'
+    }
+
+    });
+    var timepicker = $('#timepicker').timepicker({
+    format: 'HH.MM'
+});
+</script>
+
+<script>
+    
+    // Find out the cart items from localStorage
+    if(localStorage.getItem('cart') == null){
+    var cart = {};
+    }
+    else
+    {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    updateCart(cart);
+    } 
+    // If the add to cart button is clicked, add/increment the item
+    $('.cart').click(function(){
+    var idstr = this.id.toString();
+    if (cart[idstr] !=undefined) {
+    qty = cart[idstr][0] + 1;
+    cart[idstr] = [qty, name];
+    }
+    else
+    {
+    qty = 1;
+    name = document.getElementById('' + idstr).innerHTML;
+    cart[idstr] = [qty, name];
+    }
+    updateCart(cart);
+    });
+    //Add Popover to cart
+    $('#popcart').popover();
+    updatePopover(cart);
+    function updatePopover()
+    {
+        var popStr ="";
+        popStr = popStr + "<h5> Service Cart </h5><div class='mx-2 my-2'>";
+        var i = 1;
+        for (var item in cart){
+        popStr = popStr + "<b>" + i + "</b>. ";
+        popStr = popStr + document.getElementById(item).innerHTML.slice(0, 15) + ".... Qty: " + cart[item][0] + '<br>';
+        i = i+1;
+        }
+        popStr = popStr + "</div> <a href='book'><button class='btn btn-primary' id ='book'>Book Service</button></a> <button class='btn btn-primary' onclick='clearCart()' id ='clearCart'>Empty Cart</button>     "
+        console.log(popStr);
+        document.getElementById('popcart').setAttribute('data-content', popStr);
+        $('#popcart').popover('show');
+    }
+
+    function clearCart() {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        for (var item in cart) {
+            document.getElementById(item) 
+        }
+        localStorage.clear();
+        cart = {};
+        updateCart(cart);
+    }
+
+
+    function updateCart(cart) {
+        var sum = 0;
+        for (var item in cart) {
+            sum = sum + cart[item][0];
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        document.getElementById('cart').innerHTML = sum;
+        console.log(cart);
+        updatePopover(cart);
+    }
+
+</script>
+</body>
+
+</html>
+
